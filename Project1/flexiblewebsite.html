@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media screen and (max-width: 800px) {
+        .wholeFlex {
+          flex-direction: column;
+        }
+      }
+      .firstflex {
+        display: flex;
+        gap: 10px;
+      }
+      .secondflex {
+        display: flex;
+        gap: 10px;
+      }
+      .gridfirst {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+      }
+      @media screen and (max-width: 800px) {
+        .firstflex {
+          flex-direction: column;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .secondflex {
+          flex-direction: column;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .gridfirst {
+          grid-template-columns: 2fr 2fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="wholeFlex"
+      ;
+      style="
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 70px;
+        align-items: center;
+        background-color: lightblue;
+        padding: 10px;
+        overflow: hidden;
+      "
+    >
+      <div class="firstflex">
+        <div style="font-size: 22px; border: 1px solid; padding: 5px">
+          Personal
+        </div>
+        <div style="font-size: 22px; border: 1px solid; padding: 5px">
+          Business
+        </div>
+        <div style="font-size: 22px; border: 1px solid; padding: 5px">
+          Enterprise
+        </div>
+        <div style="font-size: 22px; border: 1px solid; padding: 5px">
+          Developer
+        </div>
+      </div>
+
+      <div>
+        <div class="secondflex">
+          <div style="font-size: 22px; border: 1px solid; padding: 5px">
+            Goals
+          </div>
+          <div style="font-size: 22px; border: 1px solid; padding: 5px">
+            acheivement
+          </div>
+          <div style="font-size: 22px; border: 1px solid; padding: 5px">
+            Express
+          </div>
+          <div style="font-size: 22px; border: 1px solid; padding: 5px">
+            Help
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gridfirst">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate
+        quia mollitia, adipisci commodi repellat eos tempore. Facilis id
+        accusamus ut veritatis ad adipisci, nulla aspernatur atque quos earum
+        nemo?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+        reiciendis officia? Ducimus, cumque rem laudantium similique odit
+        necessitatibus ipsum id. Quos culpa minima rem? Odio dolore eveniet
+        ipsam quam nulla.
+      </div>
+      <img src="./lamborgini.jpeg" alt="" style="width: 100%" />
+    </div>
+  </body>
+</html>
