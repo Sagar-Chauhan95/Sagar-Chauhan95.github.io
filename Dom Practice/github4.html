@@ -1,0 +1,25 @@
+<!-- Unchecking the radios and checkboxes -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function unCheck() {
+        let list = document.querySelectorAll("input");
+        for (let ele of list) {
+          ele.checked = false;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="radio" value="hello" /><label for="">hello</label>
+    <input type="radio" value="hi" /><label for="">hi</label>
+    <input type="checkbox" value="Checkbox" /><label for="">Checkbox</label>
+    <input type="button" value="Uncheck" onclick="unCheck()" />
+  </body>
+</html>

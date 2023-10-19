@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+
+      tr:nth-child(2) {
+        color: red;
+      }
+    </style>
+
+    <script>
+      function clickMe() {
+        // changing content of div
+        let DIV = document.querySelector("div");
+        DIV.innerHTML = "Villa";
+        DIV.style = "color:red";
+
+        //changing content of  paragraph
+        document.querySelector("p").innerHTML = "Phone";
+
+        // changing link and content of link
+        let anchorTag = document.querySelector("a");
+        anchorTag.setAttribute(
+          "href",
+          "https://earth.google.com/static/multi-threaded/versions/10.38.0.0/index.html?"
+        );
+        anchorTag.innerHTML = "Google Earth";
+
+        //changing image
+        let Image = document.querySelector("img");
+        Image.setAttribute("src", "./Images/alienoption2.png");
+        Image.style = "width:150px";
+
+        //changing value of input
+        document.querySelector("img~input").value = "Go";
+
+        //changing value of text area
+        document.querySelector("textarea").value = "Believe in GOD";
+
+        //changing content of label
+        document.querySelector("label").innerHTML = "Writing area";
+
+        //writing in input and adding to text area
+        let inputText = document.querySelector("label~input");
+        let textBox = document.querySelector("label+textarea~textarea");
+        textBox.value = textBox.value + " " + inputText.value;
+        inputText.value = " ";
+
+        //adding new row to table
+        let row = document.querySelector("tr:nth-child(2)");
+        let newRow = document.createElement("tr");
+        newRow.innerHTML =
+          "<td>2</td>" + "<td>Saggy</td>" + "<td>308 adams</td>";
+        row.after(newRow);
+
+        //adding another element in list
+        let listElement = document.createElement("li");
+        listElement.innerHTML = "Banana";
+        document.querySelector("li:nth-child(2)").after(listElement);
+
+        //Swaping value between inputs
+        let fInput = document.getElementById("fInput");
+        let sInput = document.getElementById("sInput");
+        let fValue = fInput.value;
+        fInput.value = sInput.value;
+        sInput.value = fValue;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>Home</div>
+    <p>Call</p>
+    <input type="button" value="change" onclick="clickMe()" />
+    <a
+      href="https://www.amazon.com/Mustang-Orange-Diecast-Motormax-79352or/dp/B07GRLLP5R/ref=asc_df_B07GRLLP5R/?tag=hyprod-20&linkCode=df0&hvadid=366288760957&hvpos=&hvnetw=g&hvrand=11145131023149880235&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9018597&hvtargid=pla-779221006007&psc=1&tag=&ref=&adgrpid=77371437278&hvpone=&hvptwo=&hvadid=366288760957&hvpos=&hvnetw=g&hvrand=11145131023149880235&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9018597&hvtargid=pla-779221006007"
+      style="text-decoration: none"
+      >Amazon</a
+    >
+    <img
+      src="./Images/astronaut.png"
+      alt=""
+      style="width: 100px; height: 100px"
+    />
+    <br /><br />
+    <input type="text" />
+    <br /><br />
+    <label for="textarea">Textarea</label>
+    <textarea cols="20" rows="5" name="textarea">Call</textarea>
+    <br /><br />
+    <input type="text" />
+    <textarea id="" cols="30" rows="10"></textarea>
+    <table>
+      <tr>
+        <th>Serial No</th>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Sagar</td>
+        <td>307W adams</td>
+      </tr>
+    </table>
+    <ul>
+      <li>Grapes</li>
+      <li>Apple</li>
+    </ul>
+    <input type="text" id="fInput" />
+    <input type="text" id="sInput" />
+  </body>
+</html>

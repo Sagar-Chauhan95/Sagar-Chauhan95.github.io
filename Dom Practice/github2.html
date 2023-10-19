@@ -1,0 +1,31 @@
+<!-- change display conditionally -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: ;
+      }
+    </style>
+    <script>
+      function showElement() {
+        document.querySelector("p+p").style.display = "block";
+      }
+      function hideElement() {
+        document.querySelector("input:nth-child(6)").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Display</p>
+    <p style="display: none">Sky is Blue</p>
+    <input type="button" value="submit" onclick="showElement()" />
+    <br /><br />
+    <input type="text" />
+    <input type="button" value="submit" onclick="hideElement()" />
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Displaying part of page conditionally -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function showCheckboxes() {
+        let division = document.querySelector("select");
+        if (division.value == "Vedas") {
+          document.querySelector("div:nth-child(5)").style.display = "block";
+          document.querySelector("div:nth-child(4)").style.display = "none";
+        } else {
+          document.querySelector("div:nth-child(4)").style.display = "block";
+          document.querySelector("div:nth-child(5)").style.display = "none";
+        }
+      }
+      function hideCheckBoxes() {
+        document.querySelector("div:nth-child(5)").style.display = "none";
+        document.querySelector("div:nth-child(4)").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <label for="srciptures">Scriptures</label>
+    <select name="Scriptures" id="">
+      <option value="Vedas">Vedas</option>
+      <option value="Upanishad" selected>Upanishad</option>
+    </select>
+    <input type="button" onclick="showCheckboxes()" value="Show" />
+    <div style="display: none">
+      <input type="checkbox" value="Ateriya" /><label for="">Ateriya</label>
+      <input type="checkbox" value="Brihadarankya" /><label for=""
+        >Brihadarankya</label
+      >
+      <input type="checkbox" value="Chandogya" /><label for="">Chandogya</label>
+      <input type="checkbox" value="Makundya" /><label for="">Makundya</label>
+    </div>
+    <div style="display: none">
+      <input type="checkbox" value="Rig" /><label for="">Rig</label>
+      <input type="checkbox" value="Yajur" /><label for="">Yajur</label>
+      <input type="checkbox" value="Adarvana" /> <label for="">Adarvana</label>
+      <input type="checkbox" value="Sama" /><label for="">Sama</label>
+    </div>
+    <hr />
+    <input type="button" value="Hide" onclick="hideCheckBoxes()" />
+  </body>
+</html>

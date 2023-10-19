@@ -1,0 +1,47 @@
+<!-- Changing style conditionally -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- another way
+    <style> 
+      .dark {
+        color: white;
+        background-color: grey;
+      }
+
+      .light {
+        color: red;
+        background-color: aqua;
+       } -->
+    </style>
+    <script>
+      function changeEffect() {
+        let mode = document.querySelector("select");
+        let text = document.querySelector("p");
+        if(mode.value=="light"){
+            text.style="color:red; background-color:blue"
+        } else{
+            text.style="color:white;background-color:grey"
+        }
+
+        // next way by defining color in style and applying
+        // text.classList.remove(mode.value == "dark" ? "light" : "dark");
+        // text.classList.add(mode.value == "dark" ? "dark" : "light");
+        // console.log(text.getAttribute("class"));
+      }
+    </script>
+  </head>
+  <body>
+    <select name="color" id="">
+      <option value="light" name="color">light</option>
+      <option value="dark" name="color">dark</option>
+    </select>
+    <br /><br /><br />
+    <p>Change of Colors</p>
+    <input type="button" value="effect" onclick="changeEffect()" />
+  </body>
+</html>
