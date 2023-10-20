@@ -1,0 +1,40 @@
+<!-- Adding CheckBoxes -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function () {
+        let games = ["Football", "Basketball", "Tennis"];
+        // for (let types of games) {
+        // method 1 ceating each input
+        //   let label = document.createElement("label");
+        //   let inputElement = document.createElement("input");
+        //   label.innerHTML=types;
+        //   inputElement.setAttribute("type", "checkbox");
+        //   inputElement.value = types;
+        //   document.body.append(label);
+        //   document.body.append(inputElement);
+        // }
+
+        // method 2 creating div
+        let myDiv = document.createElement("div");
+        for (let types of games) {
+          myDiv.innerHTML +=
+            '<input type="checkbox" value=' +
+            types +
+            ">" +
+            "<label>" +
+            types +
+            "</label>";
+        }
+        document.body.append(myDiv);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

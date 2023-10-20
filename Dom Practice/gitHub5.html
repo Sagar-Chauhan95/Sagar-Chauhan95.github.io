@@ -1,0 +1,25 @@
+<!-- Adding select using onload -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function () {
+        //Adding select
+        let planets = ["Mercury", "Venus", "Mars"];
+        let myPlanet = document.createElement("select");
+        for (let ele of planets) {
+          myPlanet.innerHTML += "<option>" + ele + "</option>";
+        }
+        document.body.append(myPlanet);
+      };
+    </script>
+  </head>
+  <body>
+    <p>List of Checkboxes</p>
+  </body>
+</html>
