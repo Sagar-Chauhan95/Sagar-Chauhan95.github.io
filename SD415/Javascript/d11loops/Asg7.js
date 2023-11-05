@@ -13,11 +13,11 @@ let costOfHouse = parseInt(prompt("Enter the cost of the house: "));
 // Checking condition as per cost of house to apply different percentage.
 if(costOfHouse<50000){
     downpayment = 0.05*costOfHouse;
-} else if(costOfHouse<100000){
-    downpayment = 1000 + 0.01*costOfHouse;
-} else if (costOfHouse<200000){
-    downpayment = 2000 +0.15*costOfHouse;
+} else if(costOfHouse>=50000 && costOfHouse<100000){
+    downpayment = 1000 + 0.01*(costOfHouse-50000);
+} else if (costOfHouse>=100000 && costOfHouse<200000){
+    downpayment = 2000 +0.15*(costOfHouse-100000);
 }else{
-    downpayment =5000 + 0.1 * costOfHouse;
+    downpayment =5000 + 0.1 * (costOfHouse-200000);
 }
 console.log("The downpayment as per the costprice " + costOfHouse + " of your house is " + downpayment);

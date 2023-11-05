@@ -1,10 +1,10 @@
 {
-    "type":"module",
+    "type": "module",
     "scripts": {
-        "apps":"ts-node ./src/app.ts"
+    "app": "ts-node ./src/app.ts"
     },
     "devDependencies": {
-        "@types/node":"^20.8.10",
-        "it-node":"^10.9.1"
+    "@types/node": "^20.5.0",
+    "ts-node": "^10.9.1"
     }
-}
+    }
