@@ -4,7 +4,7 @@ import {assert} from "chai"
 import {StudentQuiz, gradeStudent, gradeQuiz, gradeQuizLabeled } from "../src/quiz.js";
 
 
-describe{"quiz tests", function () {
+describe ("quiz tests", function () {
     const student1 = {studentId: 101, quizAnswers : [1,1,2,4]};
     const student2 = {studentId: 102, quizAnswers : [2,1,2,2]};
     const student3 = {studentId: 103, quizAnswers : [3,1,3,4]};
@@ -23,4 +23,4 @@ describe{"quiz tests", function () {
         assert.deepEqual(gradeQuizLabeled(studentQuizzes, CORRECT_ANSWERS), [{id:101, score:3}, {id:102, score:2}, {id:103, score:3}]);
     });
 
-}};
+});
