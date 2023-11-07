@@ -304,3 +304,11 @@ const prompt =require('prompt-sync')();
 // //  → 90
 // console.log(calcDifferential ([10, 20, 30, 40], [10, 20, 20, 20]));
 // //  → 32
+
+
+
+
+ function myFunction(x){
+  return console.log(Math.Square(x));
+ }
+ const result = myFunction(5);

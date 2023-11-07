@@ -71,11 +71,12 @@ export function findLongestWord(arr: string[]): number{
 /**
  * takes an array of words and returns the length of the longest one
  * @param {*} arr of words 
+ * @param {Array} arr of number
  * @param {Array} arr of numbers
  * @returns {number} length of longest word
  */
 
-export function reverseArray(arr: number[] | string[]){
+export function reverseArray(arr: number[] | string[]):(number[] | string[]) {
     return arr.reverse();
 }
 

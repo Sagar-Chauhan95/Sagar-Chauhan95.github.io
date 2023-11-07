@@ -16,7 +16,6 @@ export function maxOfThree(aa, b, c) {
     else {
         return c;
     }
-    //return 0;  //IMPLEMENT THIS -- DO NOT USE MATH.MAX
 }
 /**
  *
@@ -24,8 +23,11 @@ export function maxOfThree(aa, b, c) {
  * @returns {number} sum of arr numbers
  */
 export function sum(arr) {
-    //IMPLEMENT THIS 
-    return 0;
+    let sum = 0;
+    for (let num of arr) {
+        sum += num;
+    }
+    return sum;
 }
 /**
  *
@@ -33,8 +35,11 @@ export function sum(arr) {
  * @returns {number} sum of arr numbers
  */
 export function multiply(arr) {
-    //IMPLEMENT THIS 
-    return 0;
+    let multiply = 1;
+    for (let num of arr) {
+        multiply *= num;
+    }
+    return multiply;
 }
 /* findLongestWord */
 /**
@@ -43,8 +48,48 @@ export function multiply(arr) {
  * @returns {number} length of longest word
  */
 export function findLongestWord(arr) {
-    //IMPLEMENT THIS 
-    return 0;
+    let longestWordLength = arr[0].length;
+    for (let word of arr) {
+        if (word.length > longestWordLength) {
+            longestWordLength = word.length;
+            return longestWordLength;
+        }
+    }
+    return longestWordLength;
+}
+/* reverseArrayInPlace */
+/**
+ * takes an array of words and returns the length of the longest one
+ * @param {*} arr of words
+ * @param {Array} arr of number
+ * @param {Array} arr of numbers
+ * @returns {number} length of longest word
+ */
+export function reverseArray(arr) {
+    return arr.reverse();
+}
+export function reverseArrayInPlace(arr) {
+    let array1 = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        array1.push(arr[i]);
+    }
+    return array1;
+}
+export function scoreExams(arr, checkArray) {
+    let count = 0;
+    let resultArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            for (let k = j; k <= j; k++) {
+                if (arr[i][j] === checkArray[k]) {
+                    count++;
+                }
+            }
+        }
+        resultArray.push(count);
+        count = 0;
+    }
+    return resultArray;
 }
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
 describe("generate array", function () {
@@ -55,28 +100,20 @@ describe("generate array", function () {
 /**
  *
  * @param {*} rows num rows
- * @param {*} cols num cols
+ * @param {*} columns num cols
  * @returns {Array} 2d array with entries i + j
  */
-export function generateArray(rows, cols) {
-    //IMPLEMENT THIS 
-    return [[0]];
-}
-// Added my function
-export function calcDownpayment(houseCost) {
-    let downPayment = 0;
-    // Using the switch statement
-    if ((houseCost >= 0) && (houseCost < 50000)) {
-        downPayment = (5 / 100) * houseCost;
+// export function generateArray(rows: number, cols: number): number[][]{
+export function generateArray(rows, columns) {
+    let resultArray = [];
+    let counter = 1;
+    for (let i = 0; i < rows; i++) {
+        let rows = [];
+        for (let j = 0; j < columns; j++) {
+            rows.push(counter);
+            counter++;
+        }
+        resultArray.push(rows);
     }
-    else if ((houseCost >= 50000) && (houseCost < 100000)) {
-        downPayment = (2500) + ((10 / 100) * (houseCost - 50000));
-    }
-    else if ((houseCost >= 100000) && (houseCost < 200000)) {
-        downPayment = (7500) + ((15 / 100) * (houseCost - 100000));
-    }
-    else if (houseCost >= 200000) {
-        downPayment = (20000) + ((10 / 100) * (houseCost - 200000));
-    }
-    return downPayment;
+    return resultArray;
 }
