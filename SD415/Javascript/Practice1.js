@@ -306,9 +306,9 @@ const prompt =require('prompt-sync')();
 // //  → 32
 
 
-
-
- function myFunction(x){
-  return console.log(Math.Square(x));
- }
- const result = myFunction(5);
+let user={};
+user.name = "john";
+user.surname = "smoth";
+user.name = "pete";
+// delete user.name;
+console.log(user);

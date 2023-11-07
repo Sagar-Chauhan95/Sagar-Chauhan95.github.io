@@ -1,8 +1,8 @@
 {
-    "extends": "../configs/base.json",
-  
-    "compilerOptions": {
-    "outDir": "./dist"
-  },
-  "include": ["*.ts", "./src/*.ts" , "./test/*.ts"],
-  }
+  "extends": "../configs/base.json",
+
+  "compilerOptions": {
+  "outDir": "./dist"
+},
+"include": ["*.ts", "./src/*.ts" , "./test/*.ts"],
+}
