@@ -23,9 +23,33 @@ export function gradeQuiz(studentQuiz: number[][], correct:number[]): number[]{
     }return resultArray;
 
 }
+// student1;
+// student2;
+// student3;
 
-// export function gradeQuizLabeled(studentQuizzes:number[][],correct:number[] ): number[]{
-//     let resultArray =[];
-    
+type LabeledScore = {
+    id:number, score:number
+}
 
-// }
+export function gradeQuizLabeled(studentQuizzes:StudentQuiz[], correct:number[] ): LabeledScore[]{
+
+    let resultArray:LabeledScore[] =[];
+     for ( const students of studentQuizzes){
+        //Get student id of all student
+        const studentID = students.studentId;
+
+        // Get each student answer
+        const studentAnswers = students.quizAnswers;
+
+        let studentScore = 0;
+        // Loop through student answer and compare with correct answer
+        for ( let i=0; i<studentAnswers.length; i++){
+            if(studentAnswers[i]===correct[i]){
+                studentScore+=1;
+            }
+        }resultArray.push({id:studentID, score:studentScore});
+
+     }return resultArray;
+
+}
+
