@@ -327,6 +327,34 @@
 // console.log(b);
 // console.log(a===b);
 
+// let a = {id:"student", class: 3, };
+// a.rollNo = {sec:"A", grade:5};
+// console.log(a);
+// let b = a;
+// b.rollNo.grade = 8;
+// console.log(a);
+// console.log(b);
+// delete b.rollNo;
+// console.log(b);
+// let c = a.id +" "+ b.class;
+// console.log(c);
+// b.class = b.id;
+// console.log(b);
+// console.log(a);
 
-let a = {a:1, b:2};
-console.log(typeof(a));
+
+let student ={name:"sagar", class:3, section:{name: "sahfear", class:5, call:function(){console.log(this.name)}}};
+
+student.section.call();
+
+
+const foo= {sum};
+function sum(arr) {
+    let sum=0; 
+    for (let element of arr){
+    sum+=element;
+} 
+return sum; 
+}
+console.log(foo.sum);
+console.log(foo.sum([1,2,3]));

@@ -41,11 +41,13 @@ export function showTitles(): void {
  * @return {object} array holding all titles as elements
  */
 export function findTitles(): string[] {
-
-
-    //fix this to work according to the specs
-    let titles = ["This is a test title", "Another test title", "And another test title for good measure"];  
-    return titles;
+    let titles: string[]=[];
+    let titleName: HTMLInputElement | null = document.getElementById("title") as HTMLInputElement | null;
+    if(titleName){
+        titles.push(titleName.value);
+    }
+     // let titles = ["This is a test title", "Another test title", "And another test title for good measure"]; 
+    return titles.sort();
 }
 
 
@@ -63,7 +65,13 @@ export function addBook():  void {
  * @returns {string[]} find all  authors in libraryBooks and return them in alphabetically ordered array.
  */
 export function findAuthors(): string[] {
-    //implement this
+
+    let authors : string[] = [];
+    let nameAuthors:HTMLInputElement | null = document.getElementById('author') as HTMLInputElement | null;
+    if(nameAuthors){
+        authors.push(nameAuthors.value);
+    }
+    return authors.sort();
 
 }
 
@@ -72,7 +80,12 @@ export function findAuthors(): string[] {
  * @returns {number[]} find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
 */
 export function findIDs(): number[] {
-    //implement this
+    let IDs : number [] = [];
+    let bookID : number|null = document.getElementById("id") as number | null;
+    if(bookID){
+        IDs.push(bookID);
+    }
+    return IDs;
 
 }
 
@@ -84,6 +97,13 @@ which will be represented as a global array named libraryBooks.  createBook shou
  */
 export function createBook(title: string, author: string, libraryID: number): Book {
     //implement this
+     const newBook: Book ={
+        title:title,
+        author:author,
+        libraryID:libraryID
+     }
+     library.push(newBook);
+     return newBook;
 
 }
 
@@ -95,3 +115,6 @@ export function scramble(): void {
     console.log("implement scramble if you have time ...");
 
 }
+
+
+
