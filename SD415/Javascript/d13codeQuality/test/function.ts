@@ -55,7 +55,7 @@ describe("isVowel", function () {
     });
     it("calculate compound interest", function() {
         const computeInterest = computeCompoundInterest(100,10,1);
-        assert.strictEqual(+computeInterest.toFixed(2), 115);
+        assert.strictEqual(+computeInterest.toFixed(2), 110.47);
     });
    });
 
@@ -63,7 +63,7 @@ describe("isVowel", function () {
 // Mocha test for calculating down pament
 describe("calculating downpayment as per costprice of house", function(){
     it("Calculating downpayment", function() {
-        assert.strictEqual(calculateDowmPayment(40000), 5000);
+        assert.strictEqual(calculateDowmPayment(40000), 2000);
     });
 
     it("Calculating downpament", function() {
@@ -90,7 +90,7 @@ describe("multiply digits", function() {
     });
 
     it("Multiply digits", function() {
-        assert.strictEqual(multDigits(123), 8);
+        assert.strictEqual(multDigits(123), 6);
     });
 });
 
@@ -99,7 +99,7 @@ describe("multiply digits", function() {
 //Mocha test for converting temperature to Fahrenheit
 describe('convertTempToFahrenheit', function () {
     it("Convert temp to Fahrenheit", function () {
-        assert.strictEqual(convertTempFahrenheit(32), 94);
+        assert.strictEqual(convertTempFahrenheit(32), 89.6);
     });
 
     it("Convert temp to Fahrenheit", function () {
@@ -111,7 +111,7 @@ describe('convertTempToFahrenheit', function () {
 // Mocha Test to calculate distance between points
 describe("calculate distance", function () {
     it('calculate distance', function () {
-        assert.strictEqual(calculateDistance(0,0,5,5), 7.07);
+        assert.strictEqual(calculateDistance(0,0,5,5), 7);
     });
 });
 

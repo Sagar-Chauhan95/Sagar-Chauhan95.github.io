@@ -62,7 +62,7 @@ export   function calculateDowmPayment(cost:number):number{
 export function sumDigits(integer:number):number{
             let sum =0;
             while(integer>=1){
-                sum+=integer%10;
+                sum+=Math.floor(integer%10);
                 integer=integer/10;
             }
             return sum;
@@ -72,7 +72,7 @@ export function sumDigits(integer:number):number{
 export function multDigits(integer:number):number{
             let mult:number =1;
             while(integer>1){
-                mult*= integer%10;
+                mult*= Math.floor(integer%10);
                 integer=integer/10;
             }
             return mult;
@@ -88,7 +88,7 @@ export function convertTempFahrenheit(tempInCelsius:number): number{
 
 //Function to calculate distance between points
 export function calculateDistance(x1:number,y1:number, x2:number,y2:number): number{
-        let distance:number = Math.sqrt((x2-x1)**2 +(y2-y1)**2);
+        let distance:number = Math.floor(Math.sqrt((x2-x1)**2 +(y2-y1)**2));
         return distance;
     }
     

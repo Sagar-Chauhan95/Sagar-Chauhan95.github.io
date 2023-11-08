@@ -24,8 +24,8 @@ export function gradeQuiz(studentQuiz: number[][], correct:number[]): number[]{
 
 }
 
-export function gradeQuizLabeled(studentQuizzes:number[][],correct:number[] ): number[]{
-    let resultArray =[];
+// export function gradeQuizLabeled(studentQuizzes:number[][],correct:number[] ): number[]{
+//     let resultArray =[];
     
 
-}
+// }
