@@ -1,3 +1,9 @@
+/**
+ * This is a practice file
+ * My daily routing
+ * sdjkh
+ * @param {num}
+ */
 // const prompt =require('prompt-sync')();
 
 // // // let x =String(7);  // way to make string
