@@ -14,7 +14,7 @@ export function gradeQuiz(studentQuiz: number[][], correct:number[]): number[]{
     let resultArray =[];
     for (let i=0; i <studentQuiz.length; i++){
         let count =0;
-        for( let j=i; j<=i; j++){
+        for( let j=0; j<studentQuiz[i].length; j++){
             if(studentQuiz[i][j]===correct[j]){
                 count++;
             }
