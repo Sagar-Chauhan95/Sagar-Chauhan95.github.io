@@ -6,80 +6,80 @@
  */
 // const prompt =require('prompt-sync')();
 
-// // // let x =String(7);  // way to make string
-// // // let x1 = ""+7;    // way to make string
-// // // let y=Number(x);  // way to make number
-// // // let z = +x;    // way to make number
-// // // console.log(typeof(x));
-// // // console.log(typeof(y));
-// // // console.log(typeof(z));
-// // // console.log(typeof(x1));
+// 1. WAYS TO MAKE NUMBER STRING
+// let x =String(7);  // way to make string
+// let x1 = ""+7;    // way to make string
+// let y=Number(x);  // way to make number
+// let z = +x;    // way to make number
+// console.log(typeof(x));
+// console.log(typeof(y));
+// console.log(typeof(z));
+// console.log(typeof(x1));
 
-// // // console.log(Math.sqrt(36));
+// console.log(Math.sqrt(36));
 
-
-// // // let x= false;
-// // // let y= 0;
-// // // let z = null;
-// // // console.log(x||y||z);  // null
-// // // console.log(x??y??z);  // false
-// // // console.log(x||y);  // 0
-// // // console.log(x??y);  // false
-
-
-
-
-// // //  let i = 3;
-
-// // // while (i) {
-// // //   alert( i-- );
-// // // }
-
-
-// // // let x= parseInt(prompt("Enter a number: "));
-// // // switch(x){
-// // //     case 1: console.log("good");
-// // //     break;
-
-// // //     case 5: console.log("fail");
-// // // }
+// 2. Comparing using Nullesh coaelishing operator
+// let x= false;
+// let y= 0;
+// let z = null;
+// console.log(x||y||z);  // null
+// console.log(x??y??z);  // false
+// console.log(x||y);  // 0
+// console.log(x??y);  // false
 
 
 
-// // function checkAge(age) {
-// //     let confirm;
-// //        let dan =1;
-// //     return (age > 18) || confirm('Did parents allow you?');
-// //   }
-
-// //   console.log(checkAge(12));
-
-//   // function ssReverse(arr){ 
-//   //  // let array1:number[]=[];
-//   //  // for(let i = arr.length-1; i < arr.length; i++){
-//   //  //     array1.push(arr[i]);
-//   //  // }
-//   //  arr.reverse();
-//   //  return arr; };
-
-//   //  console.log(ssReverse([1,2,3,4]));
-
-//   //      if {
+//3. Vlidating ways
+//  let i = 3;
+// while (i) {
+//   alert( i-- );
+// }
 
 
+//4. USE OF SWITCH OPERATOR
+// let x= parseInt(prompt("Enter a number: "));
+// switch(x){
+//     case 1: console.log("good");
+//     break;
 
-//   //      }
+//     case 5: console.log("fail");
+// }
 
-//   // let arr =[1,2,3,4];
-//   // console.log(arr.at(-3));
 
-//   // const foo = console.log("hello");
-//   // // console.log(foo+ "call");
-//   // function write2file(content: number) {
-//   //   fsys.writeFile("./testWrite.txt", content, function () {}
-//   //   return fsys; );
-//   // }
-//   //   const returnVal = write2file( Math.max(1, 2, 3));
+//5. RETURNING GREATER THAN NEEDED
+// function checkAge(age) {
+//     let confirm;
+//        let dan =1;
+//     return (age > 18) || confirm('Did parents allow you?');
+//   }
+
+//   console.log(checkAge(12));
+
+
+
+//6. RETURNING REVERSE OF ARRAY
+  // function ssReverse(arr){ 
+  //  // let array1:number[]=[];
+  //  // for(let i = arr.length-1; i < arr.length; i++){
+  //  //     array1.push(arr[i]);
+  //  // }
+  //  arr.reverse();
+  //  return arr; };
+
+  //  console.log(ssReverse([1,2,3,4]));
+
+  
+
+  // let arr =[1,2,3,4];
+  // console.log(arr.at(-3));
+
+  // const foo = console.log("hello");
+  // // console.log(foo+ "call");
+  // function write2file(content: number) {
+  //   fsys.writeFile("./testWrite.txt", content, function () {}
+  //   return fsys; );
+  // }
+  //   const returnVal = write2file( Math.max(1, 2, 3));
 
 
 
@@ -343,18 +343,149 @@
 // console.log(a);
 
 
-let student ={name:"sagar", class:3, section:{name: "sahfear", class:5, call:function(){console.log(this.name)}}};
+// let student ={name:"sagar", class:3, section:{name: "sahfear", class:5, call:function(){console.log(this.name)}}};
 
-student.section.call();
+// student.section.call();
 
 
-const foo= {sum};
-function sum(arr) {
-    let sum=0; 
-    for (let element of arr){
-    sum+=element;
-} 
-return sum; 
-}
-console.log(foo.sum);
-console.log(foo.sum([1,2,3]));
+// const foo= {sum};
+// function sum(arr) {
+//     let sum=0; 
+//     for (let element of arr){
+//     sum+=element;
+// } 
+// return sum; 
+// }
+// console.log(foo.sum);
+// console.log(foo.sum([1,2,3]));
+
+// bank.getBalance = function(customerId:number):number{
+//     let sum =0;
+//     const transactions =bank.transactionsDB[customerId-1].customerTransactions;
+//     for(const transaction of transactions){
+//         sum+=transaction;
+// //     }return sum;
+// // }
+
+
+
+// // const students1 = {name:"sagar", roll:1};
+// // const student2 = {name:"ram", roll:2};
+// // const student3 = {name:"sham", roll:3};
+// // const student = [students1,student2,student3];
+
+// // sumRoll = function(){
+// //     let sum =0;
+// //     for(let i=0; i<student.length; i++){
+// //         sum+= student[i].roll;   
+// //     }
+// //     return sum;
+// // }
+// // console.log(sumRoll(student));
+
+
+// const students1 = {name:"sagar", roll:[1,2,3]};
+// const student2 = {name:"ram", roll:[4,3,6]};
+// const student3 = {name:"sham", roll:[2,6,1]};
+// const student = [students1,student2,student3];
+
+// sumRollPoints = function(){
+//     let sum =0;
+//     for(let i=0; i<student.length; i++){
+//         let eachPoints = student[i].roll;
+//         for(const points of eachPoints){
+//             sum+=points;
+//         }
+//     }return sum;
+// }
+
+// printKeys = function(){
+//     let resultArray = [];
+//     for(let i=0; i<student.length; i++){
+//         for(const key in student[i]){
+//             resultArray.push(key);
+//         }
+        
+//     }return resultArray;
+// }
+
+// console.log(sumRollPoints(student));
+// console.log(printKeys(student));
+
+
+// let x = 10;
+// console.log(x.toString());
+// console.log(typeof(x.toString()));
+
+
+// // to check equality between decimal numbers.
+// let x = 2/3;
+// let y = 0.666667;
+// console.log(y.toFixed(4)===x.toFixed(4));
+
+
+
+// let classRoom = ["ram", "shym", 'day', "night"];
+// classRoom.splice(2,3, "time");
+// console.log(classRoom)
+
+// classRoom.forEach(function(word){
+//     console.log(word)
+// });
+
+// classRoom ={name:"ram",roll:32,age:11}
+// let size;
+// for(let key in classRoom){
+//     console.log(key+ "=" +classRoom[key]);
+//     if(Number(classRoom[key])===Number(true)){
+//         size=size+1;
+
+//     } 
+// }console.log(size);
+
+// let library = [ 
+//     {
+//         author: 'Bill Gates',
+//         title: 'The Road Ahead',
+//         readingStatus: true
+//     },
+//     {
+//         author: 'Steve Jobs',
+//         title: 'Walter Isaacson',
+//         readingStatus: true
+//     },
+//     {
+//         author: 'Suzanne Collins',
+//         title:  'Mockingjay: The Final Book of The Hunger Games', 
+//         readingStatus: false
+//     }];
+// for(let books of library){
+//     if(books.readingStatus){
+//         console.log("Already read" +' '+  books.title);
+//     }else{
+//         console.log("Not read" + " "+ books.title);
+//     }
+// }
+
+// let text ='42px';
+// let integer = parseInt(text,10);
+// console.log(integer);
+
+// console.log(typeof(105..toString()))
+
+// let x =[1,2,3,4,5];
+// // delete x[3];
+// //  x.unshift(1,1);
+// // console.log(x);
+// x.splice(3,0,13,11)
+// console.log(x);
+
+// console.log(x.length);
+
+function sayHi() {
+  console.log( "Hello" );
+  }
+  const myHi = sayHi();
+  console.log( sayHi() );
+  function higherOrder() { return sayHi(); }
+  higherOrder();

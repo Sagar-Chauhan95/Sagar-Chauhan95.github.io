@@ -36,3 +36,5 @@ if(status =="salaried"){
     }
 }
 console.log("The commission as per your status and salary is: " + salesCommission);
+
+
