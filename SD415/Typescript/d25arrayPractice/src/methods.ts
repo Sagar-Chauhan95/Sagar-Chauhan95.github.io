@@ -4,8 +4,7 @@ Write a function filterRange(arr, a, b) that gets an array arr, looks for elemen
 The function should not modify the array. It should return the new array.
 */
 export function filterRange(arr: number[], a: number, b: number): number[] {
-
-    return [];
+    return arr.filter((item)=>(item>=a && item<=b));
 }
 
 
@@ -22,10 +21,10 @@ type FullNameUser = {
 
 
 export function map2fullName(users: SurnameUser[]): FullNameUser[] {
-    let result: { fullName: string, id: number }[] = [];
-    // FURTHER IMPLEMENTATION REQUIRED HERE
-
-
-
-    return result;
-}
+   
+    return users.map((user)=>({
+        fullName:`${user.name} ${user.surname}`,
+        id:user.id
+    }));
+   
+    }

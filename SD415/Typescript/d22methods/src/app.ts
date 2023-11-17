@@ -342,61 +342,61 @@
 // console.log(totalDonationReduce(dailyRecord));
 // console.log(findBigDonations(dailyRecord,10));
 
-type player = {name:string; points:number[]};
-type all =player[];
+// type player = {name:string; points:number[]};
+// type all =player[];
 
 
-const player1:player = {name: "Bob", points: [1, 2, 1]};
-const player2:player = {name: "Andre", points: [2, 0, 1]};
-const player3:player = {name: "Max", points: [1, 1, 1]};
-const players:all = [player1, player2, player3];
+// const player1:player = {name: "Bob", points: [1, 2, 1]};
+// const player2:player = {name: "Andre", points: [2, 0, 1]};
+// const player3:player = {name: "Max", points: [1, 1, 1]};
+// const players:all = [player1, player2, player3];
 
-// // write a function, averagePoints, to get an array containing the average points across for each player .
-// // Try with a regular for..of loop and then using map.
-// // console.log("expect [1.33, 1, 1 ]: ", averagePoints (players));
-// //console.log("expect [{Bob:1.33, Andre:1, Max:1} ]: ", averagePoints (players));
+// // // write a function, averagePoints, to get an array containing the average points across for each player .
+// // // Try with a regular for..of loop and then using map.
+// // // console.log("expect [1.33, 1, 1 ]: ", averagePoints (players));
+// // //console.log("expect [{Bob:1.33, Andre:1, Max:1} ]: ", averagePoints (players));
 
-function averagePoints(players:all):any[]{
-    let averagePointArray:number[]=[];
-    for(const player of players){
-        let sum:number=0;
-        let average:number=0;
-        let playerDetails = {};
-        for(const points of player.points){
-            sum+=points;
+// function averagePoints(players:all):any[]{
+//     let averagePointArray:number[]=[];
+//     for(const player of players){
+//         let sum:number=0;
+//         let average:number=0;
+//         let playerDetails = {};
+//         for(const points of player.points){
+//             sum+=points;
             
-        }
-         average=sum/player.points.length;
-        playerDetails[player.name]=average;
+//         }
+//          average=sum/player.points.length;
+//         playerDetails[player.name]=average;
        
         
-    }return averagePointArray;
-}
+//     }return averagePointArray;
+// }
 
-function averageDetailPoints(players:all):player[]{
-    let resultArr:[{}]=[{}];
-   for(let i=0; i<players.length;i++){
-    let sum =0;
-    for(let j=0; j<players[i].points; j++){
-        sum+=players[i].points[j];
+// function averageDetailPoints(players:all):player[]{
+//     let resultArr:[{}]=[{}];
+//    for(let i=0; i<players.length;i++){
+//     let sum =0;
+//     for(let j=0; j<players[i].points; j++){
+//         sum+=players[i].points[j];
 
-    }
-   }
+//     }
+//    }
 
-}
+// }
 
 
-function averageReducePoints(players:all):number{
-    let resultArray:number[]=[];
-    for(const player of players){
-        let sumPoints=player.points.reduce((sum,current)=>sum+current);
-        resultArray.push(sumPoints);
-    }
-    return resultArray.reduce((sum,current)=>sum+current);
-}
+// function averageReducePoints(players:all):number{
+//     let resultArray:number[]=[];
+//     for(const player of players){
+//         let sumPoints=player.points.reduce((sum,current)=>sum+current);
+//         resultArray.push(sumPoints);
+//     }
+//     return resultArray.reduce((sum,current)=>sum+current);
+// }
 
-console.log(averagePoints(players));
-console.log(averageReducePoints(players));
+// console.log(averagePoints(players));
+// console.log(averageReducePoints(players));
 
 
 
@@ -526,3 +526,133 @@ console.log(averageReducePoints(players));
 // let name=[{roll:1},{roll:3}];
 // let x=name.map(item=>{roll:'call'})
 // console.log(x);
+
+
+// let arr:number[] = [1,20,31,14,5];
+// let arr= ["apple",'Abide','alpha','ball',];
+
+
+// // function soNum(a:number,b:number):number{
+// //    if(a>b)return 1;
+// //    if(a==b)return 0;
+// //    if(a<b)return -1;
+// //    return 0;
+// // }
+// // arr.sort((a,b)=>a-b);
+// // arr.sort(function(a,b){return a-b});
+// arr.sort();
+// console.log(arr);
+
+// delete arr[2];
+// console.log(arr);
+// console.log(arr.length);
+// console.log(arr.slice(0,2));
+// console.log(arr);
+// console.log(arr.splice(0,1));
+// console.log(arr);
+
+
+// let str= "there,is,a,dog";
+// let newStr = str.split(",");
+// console.log(newStr);
+// let finalStr=newStr.join("S")
+// console.log(finalStr);
+
+// let arr= [1,2,3,4];
+// let result = arr.reduce((sum,current)=>sum+current,8);
+// console.log(result);
+
+// [{ date: '01/10/2022', id: 1, amount: 100 },
+// { date: '01/10/2022', id: 2, amount: 10 },
+// { date: '01/11/2022', id: 3, amount: 1 },
+// { date: '01/11/2022', id: 2, amount: 5 },
+// { date: '01/11/2022', id: 1, amount: 15 }
+// ]
+
+// const donation1 = { funderId: 1, amount: 100 };
+// const donation2 = { funderId: 2, amount: 10 };
+// const donation3 = { funderId: 3, amount: 1 };
+// const donation4 = { funderId: 2, amount: 5 };
+// const donation5 = { funderId: 1, amount: 15 };
+// const day1 = { donations: [donation1, donation2], date: "01/10/2022", };
+// const day2 = { donations: [donation3, donation4, donation5], date: "01/11/2022", };
+
+// const dailyRecord = [day1, day2];
+
+// type Donation={funderId:number; amount:number};
+// type Day = {donations:Donation[]; date:string};
+
+
+
+// let resultArr:{date:string; id:number;amount:number}[]=[];
+// return resultArr= dailyRecord.map((days)=>({
+//     date:days.date,
+//     for(let donation of days.donations){
+//         id:donation1.funderId,
+//         anount:donation1.amount
+//     }
+
+// }))
+
+// arr,fn(){ let result = [];
+   
+//       for(let ele of arr){
+//         result.push(ele);
+//       }
+// }
+
+
+
+
+// function()
+// const bar = [{x:1, y:2}, {x:10, y:4}, {x:4, y:2}]
+// console.log("expect [3, 14, 6]:", smash(bar));
+
+
+
+// let student={name:"aa",id:12};
+// let result = Object.keys(student)
+
+
+// function makeCounter():()=>number{
+//     let count=0;
+    
+//     function innerfunc():number{
+//          count++;
+//          return count;
+//     }
+//     return innerfunc;
+// }
+
+// const counter1=makeCounter();
+// const counter2 =makeCounter();
+// console.log(counter1());
+// console.log(makeCounter()());
+
+// console.log(counter1());
+// console.log(counter2());
+
+// function b() {
+//     function a() {
+//     console.log(x);
+//     }
+//     const x = 10;
+//     a();
+//     }
+//     const x = 20;
+// b(); 
+
+// type Student = {name:string; id:number};
+// let student:Student[] =[{name:"sag",id:1},{name:'mad',id:4},{name:'mad',id:5}];
+// function findStudent(arr:Student[]){
+//      let result= arr.find((person)=> (person.name==="mad"));
+//    return result;
+// }
+// console.log(findStudent(student));
+
+
+
+// let arr = ['s','a','b','c','s','s'];
+
+
+
