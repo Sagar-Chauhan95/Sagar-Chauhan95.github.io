@@ -12,6 +12,6 @@ describe("grades from quiz", function () {
         assert.strictEqual(quiz.scoreStudent(12), 2);
     });
     it("getAverage", function () {
-        assert.strictEqual(+quiz.getAverage().toFixed(3), 1.667);
+        assert.strictEqual(Number(quiz.getAverage().toFixed(3)), 1.667);
     });
 });

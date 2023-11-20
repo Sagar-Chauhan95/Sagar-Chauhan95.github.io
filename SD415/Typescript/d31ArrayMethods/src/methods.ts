@@ -43,7 +43,7 @@ export const calculator:Calculator={
          let b=parseFloat(numB);
 
          if(!(calculator.methods[operator] || isNaN(a) || isNaN(b))){
-             throw new Error ("invalid input");
+            console.log("invalid input");
          }
 
          const operation = this.methods[operator];
