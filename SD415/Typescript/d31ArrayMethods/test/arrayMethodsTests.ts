@@ -19,7 +19,7 @@ describe("filterRange", function () {
         let arr = [5, 3, 8, 1];
         let filtered = filterRange(arr, 1, 4);
         assert.deepEqual(filtered, [3, 1]);
-        assert.deepEqual(filterRange(arr), [5, 3, 8, 1]);
+        assert.deepEqual(filterRange(arr,1,8), [5, 3, 8, 1]);
     });
 });
 
@@ -36,7 +36,7 @@ describe("filterRangeInPlace", function () {
     });
 
     it("doesn't return anything", function () {
-        assert.equal(filterRangeInPlace([1, 2, 3], 1, 4), undefined);
+        assert.equal(filterRangeInPlace([1, 2, 3], 1, 4),undefined);
     });
 });
 
@@ -55,12 +55,12 @@ describe("extendable calculator", function () {
     });
 
     it("add multiplication: calculate(2 * 3) = 6", function () {
-        calculator.addMethod("*", (a, b) => a * b);
+        calculator.addMethod("*", (a:number, b:number) => a * b);
         assert.equal(calculator.calculate("2 * 3"), 6);
     });
 
     it("add power: calculate(2 ** 3) = 8", function () {
-        calculator.addMethod("**", (a, b) => a ** b);
+        calculator.addMethod("**", (a:number, b:number) => a ** b);
         assert.equal(calculator.calculate("2 ** 3"), 8);
     });
 });
@@ -120,6 +120,8 @@ describe("groupById", function() {
             ]);
         });
     });
+
+   
 
     /* write mocha test for sortByAge */
     describe("sortByAge", function() {

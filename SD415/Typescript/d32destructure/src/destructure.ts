@@ -9,6 +9,9 @@ P.S. Use Object.entries and destructuring to iterate over key/value pairs.
 type SalaryObj = { [key: string]: number };
 
 export function topSalary(salaries:SalaryObj):(string|null){
+    if(!salaries || Object.keys(salaries).length==0){
+        return "none";
+    }
     let maxSalary =0;
     let maxSalaryName=null;
     for(let [name,salary] of Object.entries(salaries)){

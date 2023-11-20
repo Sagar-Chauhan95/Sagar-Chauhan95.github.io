@@ -11,8 +11,8 @@ export function firstLast(names:string[]):{firstName:string;lastName:string}[]{
 export function replaceEnds(arr:number[],numA:number,numB:number,numC:number,numD:number):number[]{
     let newArr:number[]=arr.slice();
     newArr.splice(0,2,numA,numB)
-    newArr.splice(4,6,numC,numD);
-    return newArr;
+    newArr.splice(3,6,numC,numD);
+    return newArr;``
 };
 
 export function higho(operation:(num:number)=>number,arr:number[]):number[]{
@@ -70,7 +70,7 @@ export function calculateTotalDuration(dailyRecord:any[]):number{
 export function getAllSessions(dailyRecord:any[]):any[]{
     let resultArr:any[]=[];
    for(let days of dailyRecord){
-    resultArr=days.session.concat(days.session);
+    resultArr=resultArr.concat(days.sessions)
         
     }
  return resultArr;

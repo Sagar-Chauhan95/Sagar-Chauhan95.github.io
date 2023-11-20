@@ -26,12 +26,9 @@ export function inArray(arr:number[]):(num:number)=>boolean{
  */
 export function inBetween(low:number,high:number):(num:number)=>boolean{
     return function(num:number):boolean{
-        if(num>=low && num<=high){
-            return true;
-        }
-        return false;
-    }
-
+        return num>=low && num<=high       
+    
+}
 }
 
 
@@ -45,22 +42,28 @@ export function inBetween(low:number,high:number):(num:number)=>boolean{
  * 
  */
 
-export function makeArmy() {
-    let shooters = [];
+// export function makeArmy() {
+//     let shooters = [];
   
-    let i = 0;
-    while (i < 10) {
-        let j=i;
-      let shooter = function():void { // create a shooter function,
-        alert( j); // that should show its number
-      };
-      shooters.push(shooter); // and add it to the array
-      i++;
-    }
+//     let i = 0;
+//     while (i < 10) {
+//         let j=i;
+//       let shooter = function():void { // create a shooter function,
+//         alert( j); // that should show its number
+//       };
+//       shooters.push(shooter); // and add it to the array
+//       i++;
+//     }
   
-    // ...and return the array of shooters
-    return shooters;
-  }
+//     // ...and return the array of shooters
+//     return shooters;
+//   }
+
+export function makeArmy():(()=>number)[]{
+    return [...Array(10)].map((_,i)=>()=>i);
+
+
+}
   
   
   //army[0](); // the shooter number 0 shows 10

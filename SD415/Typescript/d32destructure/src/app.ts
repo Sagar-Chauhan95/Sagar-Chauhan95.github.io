@@ -89,6 +89,6 @@
 
 
 
-let student = {name:'sagar', age:20};
-Object.entries(student).forEach((item)=>{console.log(item)});
-console.log(Object.entries(student));
+// let student = {name:'sagar', age:20};
+// Object.entries(student).forEach((item)=>{console.log(item)});
+// console.log(Object.entries(student));

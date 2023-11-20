@@ -55,43 +55,89 @@ export {collectRoomNumbers, collectRoomsAndCapacities , collectLabeledRoomCaps, 
    */
 
    function collectRoomNumbers(classrooms:Classroom):number[]{
-    let roomNumArray:number[]=[];
-   for(const rooms of classrooms){
-    let {roomNumber}:{roomNumber:number}=rooms;
-    roomNumArray.push(roomNumber);
-   }
-   return roomNumArray;
+  //   let roomNumArray:number[]=[];
+  //  for(const rooms of classrooms){
+  //   let {roomNumber}:{roomNumber:number}=rooms;
+  //   roomNumArray.push(roomNumber);
+  //  }
+  //  return roomNumArray;
+
+  return classrooms.map((rooms)=>rooms.roomNumber);
 
   }
 
   function collectRoomsAndCapacities(classrooms:Classroom):string[]{
-    let resultArr:string[]=[];
-    for(const rooms of classrooms){
-      let str:string="";
-      let {roomNumber,capacity}:{roomNumber:number;capacity:number}=rooms;
-      str+=roomNumber+": :"+capacity;
-      resultArr.push(str);
-    }
-    return resultArr;
+    // let resultArr:string[]=[];
+    // for(const rooms of classrooms){
+    //   let str:string="";
+    //   let {roomNumber,capacity}:{roomNumber:number;capacity:number}=rooms;
+    //   str+=roomNumber+": :"+capacity;
+    //   resultArr.push(str);
+    // }
+    // return resultArr;
+
+    return classrooms.map((rooms)=>(rooms.roomNumber + '::' +rooms.capacity ));
 
   }
 
   function collectLabeledRoomCaps(classRooms:Classroom):{roomNumber:number,capacity:number}[]{
-    let resultArr=[];
-    for(const rooms of classrooms){
-      
-     
+    return classRooms.map((rooms)=>{ const finalRooms = {roomNumber :rooms.roomNumber, capacity : rooms.capacity};
+  return finalRooms;})
+   
+  }
 
-      
+  function countStudentsInClassroom(classRooms:Classroom,roomNumber:number):number|undefined{
+    let classRoom= classRooms.find((classRoom)=>(classRoom.roomNumber==roomNumber));
+    return classRoom?.students.length;
 
-    }
+  }
+
+  function findClassroomsWithCapacity(classRooms:Classroom,minCapacity:number):Classroom{
+   return classRooms.filter((classRoom)=>(classRoom.capacity>= minCapacity))
+    
+  }
+
+  function findStudentsOlderThan(classRooms:Classroom, age:number):Student[]{
+    let result:Student[]=[];
+    classRooms.forEach((classRoom)=>{
+      result =result.concat(classRoom.students.filter((student)=>student.age>age));
+    });
+    return result;
 
   }
 
 
+// function averageStudentAge(classRooms:Classroom):number{
+//   //maping through classroom to get student
+//   let result = classRooms.map((classRoom)=>{
 
-  
-  
+//     //maping through student array to get student age
+//     let studentList = classRoom.students.map((studentAge)=>studentAge.age);
+//     let sum=0;
+//     //getting sum of student age
+//     for(const ages of studentList){
+//       sum+=ages;
+//     }
+//     // returning average of student ages of each classroom
+//     return sum/studentList.length;
+//   });
+// //getting average of total student average ages
+//   let totalAges=  result.reduce((sum,current)=>sum+current,0);
+//   return totalAges/classRooms.length;
+
+// }
+
+function averageStudentAge(classrooms: Classroom): number {
+  let totalAge = 0;
+  let totalStd = 0;
+  classrooms.forEach((classroom) => {
+    classroom.students.forEach((student) => {
+      totalAge += student.age;
+      totalStd++;
+    });
+  });
+  return totalAge / totalStd;
+}
   
   
   

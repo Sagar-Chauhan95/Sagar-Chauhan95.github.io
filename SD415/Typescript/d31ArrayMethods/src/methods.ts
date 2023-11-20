@@ -3,38 +3,22 @@
 Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
 The function should not modify the array. It should return the new array.
 */
-export function filterRange(arr: number[], a: number, b: number): number[] {
-    let newArr:number[]=arr.slice();
+
+export function filterRange(arr: number[],a: number, b: number): number[] {
+    let newArr = arr.slice();
+   
     return newArr.filter((numbers)=>(numbers>=a && numbers<=b));
+    
 }
 
 /*
 Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
 The function should only modify the array. It should not return anything.
 */
-export function filterRangeInPlace(arr: number[], a: number, b: number): void {
-    let filteredArray = arr.filter((number)=>(number>=a && number<=b));
-    filteredArray.length;
-
-    // function filterRangeInPlace(arr, a, b) {
-
-    //     for (let i = 0; i < arr.length; i++) {
-    //       let val = arr[i];
-      
-    //       // remove if outside of the interval
-    //       if (val < a || val > b) {
-    //         arr.splice(i, 1);
-    //         i--;
-    //       }
-    //     }
-      
-    //   }
-      
-    //   let arr = [5, 3, 8, 1];
-      
-    //   filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
-      
-    //   alert( arr ); // [3, 1]
+export function filterRangeInPlace(arr: number[], a: number, b: number): void{
+//    return  arr.filter((number)=>(number>=a && number<=b));
+   arr.splice(0, arr.length, ...arr.filter(item => (a <= item) && (item <= b)));
+    
 
 }
 
@@ -55,8 +39,8 @@ export const calculator:Calculator={
 
         let [numA,operator,numB]=str.split(" ");
         // use of destructure to allocate strings to element of array;
-         const a = parseFloat(numA);
-         const b=parseFloat(numB);
+         let a = parseFloat(numA);
+         let b=parseFloat(numB);
 
          if(!(calculator.methods[operator] || isNaN(a) || isNaN(b))){
              throw new Error ("invalid input");
@@ -74,7 +58,7 @@ export const calculator:Calculator={
 
 
 export function unique(arr: string[]): string[] {
-
+    return arr.filter((item,index)=>arr.indexOf(item)===index);
     
 }
 
@@ -88,9 +72,11 @@ export function groupById(users: User[]): { [key: string]: User } {
     // declare usersById to be an object with string keys and User values
     const usersById: { [key: string]: User } = {};  
     // FURTHER IMPLEMENTATION REQUIRED HERE
+   return users.reduce((user,current)=>{
+    user[current.id]=current;
+    return user;
+   },usersById);
 
-
-    return usersById;
 }
 
 type SurnameUser = {
@@ -106,29 +92,31 @@ type FullNameUser = {
 
 
 export function map2fullName(users: SurnameUser[]): FullNameUser[] {
-    let result: { fullName: string, id: number }[] = [];
+    // let result: { fullName: string, id: number }[] = [];
     // FURTHER IMPLEMENTATION REQUIRED HERE
-
-
-
-    return result;
+    return users.map((user)=>({fullName:`${user.name} ${user.surname}`,id :user.id}));
 }
 
 
 export function sortByAge(users: User[]  ): void {
     // FURTHER IMPLEMENTATION REQUIRED HERE
+    let sortedResult= users.sort((a,b)=>(a.age-b.age));
+    console.log(sortedResult);
   }
 
 export function findOldest(users: User[]): User {
     let oldest = users[0];
     // FURTHER IMPLEMENTATION REQUIRED HERE
-
-
-
-    return oldest;
+    for(const user of users){
+        if(user.age>oldest.age){
+            oldest=user;
+        }
+    }return oldest;
+  
 }
 
 /* getAverageAge using reduce */
 export function getAverageAge(users: User[]): number {
-    return 0;
+    let sumAge = users.reduce((sum,current)=>sum+current.age,0);
+    return  sumAge/users.length;
 }

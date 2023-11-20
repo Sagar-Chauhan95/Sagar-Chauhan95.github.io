@@ -482,10 +482,15 @@
 
 // console.log(x.length);
 
-function sayHi() {
-  console.log( "Hello" );
-  }
-  const myHi = sayHi();
-  console.log( sayHi() );
-  function higherOrder() { return sayHi(); }
-  higherOrder();
+// function sayHi() {
+//   console.log( "Hello" );
+//   }
+//   const myHi = sayHi();
+//   console.log( sayHi() );
+//   function higherOrder() { return sayHi(); }
+//   higherOrder();
+
+// let x={}
+// x.name="dog";
+// x.age=12
+// console.log(x);

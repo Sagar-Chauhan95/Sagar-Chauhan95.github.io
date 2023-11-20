@@ -4,6 +4,12 @@
 // console.log(product);
 // console.log(maxNum);
 
+// import { time } from "console";
+
+// import { stat } from "fs";
+
+// import { resourceLimits } from "worker_threads";
+
 
 
 
@@ -263,36 +269,344 @@
 // }
 
 
-interface Session {
-    userId: number;
-    duration: number;
-  }
+// interface Session {
+//     userId: number;
+//     duration: number;
+//   }
   
-  interface Day {
-    sessions: Session[];
-    date: string;
-  }
+//   interface Day {
+//     sessions: Session[];
+//     date: string;
+//   }
   
-  const session1 = { userId: 1, duration: 60 };
-  const session2 = { userId: 2, duration: 45 };
-  const session3 = { userId: 2, duration: 30 };
-  const session4 = { userId: 3, duration: 15 };
-  const session5 = { userId: 3, duration: 75 };
-  const day1 = { sessions: [session1, session2], date: "01/10/2022" };
-  const day2 = { sessions: [session3, session4, session5], date: "01/11/2022" };
-  const dailyRecord = [day1, day2];
+//   const session1 = { userId: 1, duration: 60 };
+//   const session2 = { userId: 2, duration: 45 };
+//   const session3 = { userId: 2, duration: 30 };
+//   const session4 = { userId: 3, duration: 15 };
+//   const session5 = { userId: 3, duration: 75 };
+//   const day1 = { sessions: [session1, session2], date: "01/10/2022" };
+//   const day2 = { sessions: [session3, session4, session5], date: "01/11/2022" };
+//   const dailyRecord = [day1, day2];
   
-  function getDuration(dailyRecord: Day[]): Map<number, number> {
-    return dailyRecord.reduce((userDurations, day) => {
-      day.sessions.forEach(session => {
-        const { userId, duration } = session;
-        userDurations.set(userId, (userDurations.get(userId) || 0) + duration);
-      });
-      return userDurations;
-    }, new Map<number, number>());
-  }
+//   function getDuration(dailyRecord: Day[]): Map<number, number> {
+//     return dailyRecord.reduce((userDurations, day) => {
+//       day.sessions.forEach(session => {
+//         const { userId, duration } = session;
+//         userDurations.set(userId, (userDurations.get(userId) || 0) + duration);
+//       });
+//       return userDurations;
+//     }, new Map<number, number>());
+//   }
   
-  const userDurations = getDuration(dailyRecord);
+//   const userDurations = getDuration(dailyRecord);
   
-  console.log(userDurations);
+//   console.log(userDurations);
+
+
+
+// let student = [{name:'sag',class:3},{name:'bag',class:4},{name:'aag',class:1},{name:'alex',class:3}];
+// let sortedStudent= student.sort((a,b)=>a.class-b.class);
+// console.log(sortedStudent);
+
+// let sortedByName= student.sort((a,b)=>{
+//   const nameA= a.name.toUpperCase();
+//   const nameB = b.name.toUpperCase();
+//   if(nameA>nameB){
+//     return 1
+//   }else if (nameA<nameB){
+//     return -1
+//   }else return 0;
+
+// })
+// console.log(sortedByName);
+// student.sort((property1,property2)=>(property1.name-property2.class))
+
+
+// let john = { name: "John", surname: "Smith", age: 10 };
+// let pete = { name: "Pete", surname: "Hunt", age: 20 };
+// let people = [ john, pete];
+
+// type Person = {name:string; surname:string; age:10};
+
+// Use the map function to map the people array to the following:
+// [{ fullName: "John Smith", age: 10 },
+// { fullName: "Pete Hunt", age: 20 },]
+
+// function mappingNames(people:Person[]):{fullName:string,age:number}{
+
+// return people.map((person)=>{
+//     return {fullName = person.name +" "+ person.surname,
+//    age = person.age;
+// }});
+// }
+
+
+// Final Exam practice
+////
+////
+//
+/////
+// 1. Printing index and length of each item
+// const names:string[]=["Bilbo", "Gandalf", "Nazgul"];
+
+// function returnLength(names:string[]):string[]{
+//     return names.map((item,index)=> (`${index} : ${item.length}`));
+// }
+// console.log(returnLength(names));
+
+// 2. Sorting array
+// let arr :number[]= [ 2, 1, 15 ]
+// let arr :string[]=['sag','aag','dog']
+// function sortArray(arr:(number|string)[]):(number|string)[]{
+//     // return arr.sort((a,b)=>a-b);  // to sort number 
+// function sortNumbers(a:number,b:number):number{   // for ascending order
+//     if(a>b){
+//         return -1;
+//     }else if(a<b){
+//         return 1;
+//     }else{return 0;
+        
+//     }
+// }
+
+// function sortNumbers(a:number,b:number):number{  // for decending order
+//     if(a>b){
+//         return -1;
+//     }else if(a<b){
+//         return 1;
+//     }else{return 0;
+        
+//     }
+// }
+// const sortedArray = arr.sort(sortNumbers);  // another way to sort number;
+// console.log(sortedArray);
+    // return arr.sort(); // sorting characters because array.sort() always sort items as string
+// }
+// console.log(sortArray(arr));
+
+
+// // 3. Use of reduce
+// let arr:number[] = [1, 2, 3, 4, 5];
+// function sumArray(arr:number[]):number{
+//     // return arr.reduce((sum,current)=>sum+current,0);  // to print sum of array
+//     // return arr.reduce((product,current)=>product * current,1);  // to print product of array
+//     return arr.reduce((max,current)=>(Math.max(max,current)));  // To find max number in the array
+// }
+  
+// let student= {name:'sag',age:12}
+// // let result1=Object.keys(student);
+// // let result2 = Object.values(student);
+// let result3 =Object.entries(student);
+// for(let [key,value] of result3){
+//     console.log(`${key} : ${value}`);
+
+// }
+// console.log(result1);
+// console.log(result2);
+// console.log(result3);
+
+
+// Recursion
+//Factorial of number
+// function calculateFact(a:number):number{
+//     if(a===1){
+//         return 1
+//     }else{
+//         return a*calculateFact(a-1);
+
+//     }
+// } 
+// console.log(calculateFact(5));
+
+
+//returning Highest common factor between two number
+// function highestCommonFactor(a:number,b:number):number{
+//     if(b===0){
+//         return a;
+//     }else{
+//         return highestCommonFactor(b, a%b);
+//     }
+// }
+// console.log(highestCommonFactor(32,8))
+
+
+// returning numbers between range of two number
+// function getNumberBetween(start:number,end:number):number[]{
+//     if(end-start===2){
+//         return [start+1];
+//     }else{
+//         let list = getNumberBetween(start, end-1);
+//         list.push(end-1);
+//         return list; 
+//     }
+// }
+// console.log(getNumberBetween(2,7));
+
+// recursion to print the sum of elements of array
+// function sumOfArray(arr:number[],index:number):number{
+//     if(index>=arr.length){
+//         return 0;
+//     }else{
+//         return arr[index]+ sumOfArray(arr,index+1);
+//     }
+// }
+    
+// let  array:number[] = [1, 2, 3, 4, 5, 6]
+// console.log(sumOfArray(array,0));
+
+//returning exponent of number ( here sup is 2 because it is exponent)
+// function returnExponent(num:number,sup:number):number{
+//     if(sup==0){
+//         return 1;
+//     }else{
+//         return num * returnExponent(num,sup-1);
+//     }
+// }
+// console.log(returnExponent(8,2));
+
+
+//returning cube of number
+// function returnCube(num:number,cube:number):number{
+//     if(cube===0){
+//         return 1;
+//     }else{
+//         return num*returnCube(num,cube-1);
+//     }
+// }
+// console.log(returnCube(3,3));
+
+
+//Destructuring
+// const team =['Bob','Fred','Jim'];
+// const [firstPerson, secondPerson, ...remain]:string[]= team;
+// console.log(firstPerson.toLowerCase());
+// console.log(secondPerson.toLocaleLowerCase());
+// console.log(remain);
+// console.log(...remain);
+
+// type Student ={name:string;age:number};
+// let student:Student ={name:'sagar',age:12}
+
+// const{name:n,age:ag}:{name:string,age:number}=student;
+// console.log(n);
+// console.log(ag);
+
+// // //Destructuring object
+// type Team = {point:string; shooting:string; power:string; small:string; center:string};
+// const team:Team= { point: "Bob", shooting: "Fred", power: "Jim", small: "Al", center: "Big Sleep" };
+// const {point:one,shooting:two,power:three,small:four,center:five}:Team=team;
+
+// console.log(one);
+// console.log(two);
+// console.log(three);
+// console.log(four);
+// console.log(five);
+
+// type Student ={name:string;age:number};
+// const student:Student ={name:'sag',age:10};
+// function getName({name, age}:Student):string{
+//     return  `${name} + : ${age}`;
+// }
+// console.log(getName(student));
+
+
+// function makeCounter():(num:number)=>number{
+// let count:number =0;
+// return function innerFunc(a:number):number{
+    
+//     return count+a;
+
+// }
+// }
+
+// console.log(makeCounter()(5));
+
+// const array:number[] =[1,2,3,4,5,7,9];
+// let x:number=2;
+// let y:number=6;
+
+
+// function filterNumbers(arr:number[]):(numA:number,numB:number)=>number[]{
+//     return function innerFilter(a:number,b:number):number[]{
+//        return arr.filter((item)=>(item>=a && item<=b));
+//     }
+// }
+// console.log(filterNumbers(array)(x,y));
+
+// Returning sum of array using ...rest operator
+// let array:number[] =[1,2,3,4,5,6];
+// function arraySum([x,y,...rest]:number[]):number{
+//     let total:number = x+y;
+//     let subTotal = rest.reduce((sum,current)=>sum+current,0);
+//     return total + subTotal;
+
+// }
+// console.log(arraySum(array));
+
+// Returning even elements of array using rest operator
+// let array:number[] =[2,3,4,5,6];
+// function returnEven([x,...rest]:number[]):number[]{
+//     let result:number[]=[];
+//     if(x%2===0){
+//         result.push(x);
+//     }
+//     let subTotal = rest.filter((num)=>num%2===0);
+//     result =result.concat(subTotal);
+//     return result;
+// }
+
+// console.log(returnEven(array));
+
+// returning product of even numbers of array
+// let array:number[] =[2,3,4,5,6];
+// function arrayProductEvenNumbers([x,...rest]:number[]):number{
+//     let resultedProduct = 1;
+//     if(x%2===0){
+//         resultedProduct=resultedProduct*x;
+//     }
+//     let subProduct = rest.reduce((product,current)=>{
+//         if(current%2===0){
+//             return product*current;
+//         }return product
+      
+// },1);
+// resultedProduct=resultedProduct*subProduct;
+// return resultedProduct;
+   
+// }
+// console.log(arrayProductEvenNumbers(array));
+
+
+//Return of closure function 
+// function callMe():()=>void{
+//     let name="Ram"
+//     return function me():void{
+//         console.log("hello"+name);
+    
+//     }
+// }
+// callMe()(); // different result between just calling and printing callback
+// console.log(callMe()());
+
+// function sayHi(phrase:string):void{
+//     console.log('Hello '+ phrase)
+    
+// }
+// let timerId=setTimeout(sayHi,4000,'sagar');
+// timerId;
+// setTimeout(()=>{clearTimeout(timerId);console.log("reduced to 0")},0);
+// // let intervalTime= setInterval(sayHi,2000,'sagar');
+// // setTimeout(()=>{clearTimeout(intervalTime);console.log("stop")},6000);
+
+
+// //Recursion fibonacci
+// function fibonacci(n:number):number{
+//     if(n<=1){
+//         return n;
+//     }else {
+//         return fibonacci(n-1)+fibonacci(n-2);
+//     }
+// }
+
+// console.log(fibonacci(7));
 

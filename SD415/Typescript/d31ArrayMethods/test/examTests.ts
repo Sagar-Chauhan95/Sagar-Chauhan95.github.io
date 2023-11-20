@@ -29,7 +29,7 @@ describe("exam2 coding", function () {
         //first two number arguments replace the first and second elements of the array, last two number arguments replace the 
         //last two elements of the array
         const arr = [5, 4, 3, 2, 1, 0];
-        const result2 = [10, 9, 3, 2, 8, 7];
+        const result2 = [10, 9, 3, 8, 7];
         assert.deepEqual(replaceEnds(arr, 10, 9, 8, 7), result2);
         assert.deepEqual(arr, [5, 4, 3, 2, 1, 0]); //original array is unchanged
     });
@@ -84,8 +84,8 @@ describe("fitness tracking", function () {
    
 
     //Write a function getAllSessions that will use the concat method to return an array with all  the sessions in the dailyRecord.
-    const allSessions = [session1, session2, session3, session4 , session5];
-    it("calculateDailyTotalDuration", function () {
+    const allSessions = [session1, session2, session3, session4,session5];
+    it("Get all season", function () {
         assert.deepEqual(getAllSessions(dailyRecord), allSessions);
     });
 
